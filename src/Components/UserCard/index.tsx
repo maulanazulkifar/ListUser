@@ -9,7 +9,8 @@ const bull = (
     </Box>
 );
 
-const UserCard = () => {
+const UserCard = (user:never) => {
+    console.log(user)
   return (
       <Card sx={{ minWidth: 275 }}>
           <CardContent>
