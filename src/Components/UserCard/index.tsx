@@ -1,28 +1,22 @@
 import {Box, Button, Card, CardActions, CardContent, Typography} from "@mui/material";
+import {User} from "../../Interfaces/User.ts";
 
-const bull = (
-    <Box
-        component="span"
-        sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-    >
-        •
-    </Box>
-);
-
-const UserCard = (user:never) => {
-    console.log(user)
+const UserCard = (user:User) => {
   return (
       <Card sx={{ minWidth: 275 }}>
           <CardContent>
-              <img src={'https://picsum.photos/200'} alt={'user-avatar'}/>
+
+              <Box width={'100%'}>
+                  <img width={'100%'} src={'https://picsum.photos/200'} alt={'user-avatar'}/>
+              </Box>
               <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                  Word of the Day
+                  {user.email}
               </Typography>
               <Typography variant="h5" component="div">
-                  be{bull}nev{bull}o{bull}lent
+                  {user.name}
               </Typography>
               <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                  adjective
+                  {user.username}
               </Typography>
               <Typography variant="body2">
                   well meaning and kindly.
