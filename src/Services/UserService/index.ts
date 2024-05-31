@@ -9,7 +9,7 @@ const UserService = async (): Promise<User[]> => {
         }
         return await response.json();
     } catch (error) {
-        console.error('Error fetching users:', error.message);
+        console.error('Error fetching users:', error);
         throw error;
     }
 };
